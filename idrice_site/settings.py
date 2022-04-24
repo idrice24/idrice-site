@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'idrice_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3', # this is to connect to a local databse in the project
+        #'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
+        'PASSWORD': 'idrice',
+        'HOST': '', # an empty string means it is open on localhost
+        'PORT': '',
+        'NAME': 'idricedb', # name of the db
     }
 }
 
